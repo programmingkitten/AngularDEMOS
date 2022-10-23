@@ -1,0 +1,15 @@
+<div>
+    HEADER
+</div>
+
+<div id="content">
+    <div *ngIf="users">
+        <button (click)="reloadButtonHandler()">RELOAD</button>
+        <app-user-list *ngIf="users" [userArray]="users!"></app-user-list>
+    </div> 
+    <div *ngIf="!users">Loading...</div> 
+</div>  
+
+<div>
+    FOOTER
+</div>
